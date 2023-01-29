@@ -1,1 +1,14 @@
-$primary: red;
+html {
+  --text-color: #60636D;
+  --text-color--darker: #1B1D23;
+  --text-color-medium: #7D828F;
+  --text-color--light: #C8CCD8;
+  --text-color--extra-light: #EEEFF4;
+
+  --ui-background-color: #FFFFFF;  
+  --ui-color--error: #DF5656;
+  --ui-font: "League Spartan", sans-serif;
+
+  --timing-animation: 0.3s;
+  --timing-animation-hover: 0.4s;
+}

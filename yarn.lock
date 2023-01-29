@@ -537,6 +537,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/league-spartan@^4.5.13":
+  version "4.5.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/league-spartan/-/league-spartan-4.5.13.tgz#4bff964afe717bc9d6f7f2187e9630e75822b594"
+  integrity sha512-GyF32dt1fw/TQlMJIHI5uPILRKldOENT5bQUzDDQIfeJMrXp/04Borcwmuqch5pqueAQ+di7fo204dgaZlCEjw==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
