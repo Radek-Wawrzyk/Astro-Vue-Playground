@@ -1,13 +1,13 @@
 ---
+// Components
 import AppNavigation from '@components/App/AppNavigation/AppNavigation.vue';
-import { navigationMenu } from '@/mocks';
+import AppIndicator from '@components/App/AppIndicator/AppIndicator.vue';
 
+// Styles
 import '@/styles/main.scss';
+import './Main.scss';
 
-export interface Props {
-	title: string;
-}
-
+import { navigationMenu } from '@/mocks';
 const { title } = Astro.props;
 ---
 
@@ -22,8 +22,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<AppNavigation menu={navigationMenu} client:idle />
+		<AppIndicator name={title} />
 
-		<main class="app-page">
+		<main class="main-layout">
 			<slot />
 		</main>
 	</body>
