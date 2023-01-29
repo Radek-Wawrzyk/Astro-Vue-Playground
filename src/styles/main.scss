@@ -1,0 +1,8 @@
+// Reset CSS
+@use './components/reset.scss';
+
+//Core modules
+@use './components/variables.scss';
+@use './components/base.scss';
+@use './components/typography.scss';
+
