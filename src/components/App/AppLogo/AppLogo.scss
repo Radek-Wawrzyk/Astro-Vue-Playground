@@ -1,0 +1,40 @@
+.app-logo {
+  position: relative;
+
+  &--is-dark {
+    background-color: var(--ui-background-color--dark);
+
+    .app-logo__icon path {
+      fill: var(--ui-background-color);
+    }
+  }
+
+  &--is-big {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__link {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Media
+
+@media screen and (max-width: 768px) {
+  .app-logo {
+    &--is-big {
+      width: 120px;
+      height: 120px;
+
+      .app-logo__icon {
+        width: 60px;
+      }
+    }
+  }
+}

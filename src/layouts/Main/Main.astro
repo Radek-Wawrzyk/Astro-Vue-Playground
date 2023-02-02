@@ -1,0 +1,33 @@
+---
+import AppNavigation from '@components/App/AppNavigation/AppNavigation.vue';
+import AppIndicator from '@components/App/AppIndicator/AppIndicator.vue';
+import AppFooter from '@components/App/AppFooter/AppFooter.vue';
+
+import '@/styles/main.scss';
+import './Main.scss';
+
+import { navigationMenu } from '@/mocks';
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+
+	<body>
+		<AppNavigation menu={navigationMenu} client:idle />
+		<AppIndicator name={title} />
+
+		<main class="main-layout">
+			<slot />
+		</main>
+
+		<AppFooter menu={navigationMenu} client:visible />
+	</body>
+</html>

@@ -1,5 +1,3 @@
-// import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
-
 import { ApolloClient, HttpLink } from '@apollo/client/core';
 import { InMemoryCache } from '@apollo/client/cache';
 

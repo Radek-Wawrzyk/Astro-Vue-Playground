@@ -1,8 +1,13 @@
 // Reset CSS
-@use './components/reset.scss';
+@import './components/reset.scss';
+
+// Fonts
+@import '@fontsource/league-spartan';
 
 //Core modules
-@use './components/variables.scss';
-@use './components/base.scss';
-@use './components/typography.scss';
+@import './components/variables.scss';
+@import './components/base.scss';
+@import './components/typography.scss';
+@import './components/layout.scss';
+@import './components/animations.scss';
 

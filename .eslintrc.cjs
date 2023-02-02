@@ -1,4 +1,3 @@
-
 module.exports = {
   root: true,
   extends: [
@@ -12,6 +11,6 @@ module.exports = {
     'eslint:recommended',
   ],
   rules: {
-
+    "import/prefer-default-export": 0,
   },
 };

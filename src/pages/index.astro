@@ -1,43 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { gql } from '@apollo/client/core';
+import MainLayout from '../layouts/Main/Main.astro';
 import { client } from '@/graphql/client';
+import { GET_HOME_QUERY } from '@/graphql/queries/home';
 
 let data = null;
 
 try {
 	data = await client.query({
-		query: gql`
-			query getPages {
-				allPages {
-					edges {
-						node {
-							name
-						}
-					}
-				}
-			}
-		`
+		query: GET_HOME_QUERY,
+		variables: { uid: "home"}
 	});
 
-	console.log(data.data.allPages.__typename);
+	console.log(data);
 } catch (error) {
 	console.log(error);
 }
 
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		Home { data?.data?.allPages?.__typename }
-	</main>
-</Layout>
-
-<style lang="scss">
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-		color: $primary;
-	}
-</style>
+<MainLayout title="Home">
+	<div class="home-page container">
+		{ data?.data.page.__typename }
+	</div>
+</MainLayout>

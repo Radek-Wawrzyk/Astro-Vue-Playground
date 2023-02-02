@@ -1,0 +1,10 @@
+.container {
+  max-width: calc(1100px + 4rem);
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+
+  &--full {
+    max-width: 100%;
+  }
+}
