@@ -13,10 +13,14 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.6",
     "@astrojs/netlify": "^2.0.0",
     "@astrojs/vue": "^2.0.0",
+    "@prismicio/client": "^6.7.3",
     "@fontsource/league-spartan": "^4.5.13",
     "astro": "^2.0.0",
+    "gql": "^1.1.2",
+    "graphql": "^16.6.0",
     "sass": "^1.57.1",
     "vue": "^3.2.30"
   },

@@ -1,5 +1,31 @@
 ---
 import MainLayout from '../layouts/Main/Main.astro';
+import Layout from '../layouts/Layout.astro';
+import { gql } from '@apollo/client/core';
+import { client } from '@/graphql/client';
+
+let data = null;
+
+try {
+	data = await client.query({
+		query: gql`
+			query getPages {
+				allPages {
+					edges {
+						node {
+							name
+						}
+					}
+				}
+			}
+		`
+	});
+
+	console.log(data.data.allPages.__typename);
+} catch (error) {
+	console.log(error);
+}
+
 ---
 
 <MainLayout title="Home">
