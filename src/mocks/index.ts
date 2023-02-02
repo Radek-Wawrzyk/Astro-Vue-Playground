@@ -2,6 +2,10 @@ import type { NavigationMenuElement } from "@/types/models/Navigation";
 
 const navigationMenu: NavigationMenuElement[] = [
   {
+    url: '/',
+    name: 'Home',
+  },
+  {
     url: '/portfolio/',
     name: 'Portfolio',
   },
@@ -10,7 +14,7 @@ const navigationMenu: NavigationMenuElement[] = [
     name: 'About Us',
   },
   {
-    url: '/contact/',
+    url: 'mailto:john_doe@example.com',
     name: 'Contact',
   },
 ];

@@ -1,27 +1,17 @@
 ---
 import MainLayout from '../layouts/Main/Main.astro';
-import Layout from '../layouts/Layout.astro';
-import { gql } from '@apollo/client/core';
 import { client } from '@/graphql/client';
+import { GET_HOME_QUERY } from '@/graphql/queries/home';
 
 let data = null;
 
 try {
 	data = await client.query({
-		query: gql`
-			query getPages {
-				allPages {
-					edges {
-						node {
-							name
-						}
-					}
-				}
-			}
-		`
+		query: GET_HOME_QUERY,
+		variables: { uid: "home"}
 	});
 
-	console.log(data.data.allPages.__typename);
+	console.log(data);
 } catch (error) {
 	console.log(error);
 }
@@ -30,6 +20,6 @@ try {
 
 <MainLayout title="Home">
 	<div class="home-page container">
-		Home
+		{ data?.data.page.__typename }
 	</div>
 </MainLayout>

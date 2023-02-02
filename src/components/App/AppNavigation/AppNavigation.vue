@@ -1,9 +1,7 @@
 <template>
   <nav class="app-navigation">
     <div class="container app-navigation__container">
-      <figure class="app-navigation__logo">
-        <img class="app-navigation__logo-inner" src="@/assets/images/logo.svg" />
-      </figure>
+      <app-logo class="app-navigation__logo"/>
 
       <button 
         class="app-navigation__hamburger" 
@@ -39,9 +37,13 @@
 <script lang="ts">
 import type { NavigationMenuElement } from "@/types/models/Navigation";
 import { defineComponent, PropType, ref } from 'vue';
+import AppLogo from "../AppLogo/AppLogo.vue";
 
 export default defineComponent({
   name: 'AppNavigation',
+  components: {
+    AppLogo,
+  },
   props: {
     menu: {
       type: Array as PropType<NavigationMenuElement[]>,
