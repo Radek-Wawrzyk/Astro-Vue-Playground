@@ -2,24 +2,26 @@
 import MainLayout from '../layouts/Main/Main.astro';
 import { client } from '@/graphql/client';
 import { GET_HOME_QUERY } from '@/graphql/queries/home';
+import SectionCta from '@components/Sections/SectionCta/SectionCta.vue';
+import type { CmsSection, CmsSectionCta } from '@/types/models/Cms';
+import { CmsSections } from '@/types/enums/Cms';
 
-let data = null;
+let response = null;
 
 try {
-	data = await client.query({
+	response = await client.query({
 		query: GET_HOME_QUERY,
 		variables: { uid: "home"}
 	});
-
-	console.log(data);
 } catch (error) {
 	console.log(error);
 }
 
+const sectionCtaData: CmsSectionCta = response?.data.page.body.find((section: CmsSection) => section.__typename === CmsSections.Cta);
 ---
 
 <MainLayout title="Home">
-	<div class="home-page container">
-		{ data?.data.page.__typename }
+	<div class="home-page">
+		<SectionCta data={sectionCtaData} client:visible />
 	</div>
 </MainLayout>

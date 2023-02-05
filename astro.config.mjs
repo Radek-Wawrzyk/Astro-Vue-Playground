@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
+
 import vue from "@astrojs/vue";
 import netlify from "@astrojs/netlify/functions";
 
@@ -9,6 +10,8 @@ export default defineConfig({
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
         '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
+        '@types': fileURLToPath(new URL('./src/types', import.meta.url)),
+        '@composables': fileURLToPath(new URL('./src/composables', import.meta.url)),
       },
     },
     css: {

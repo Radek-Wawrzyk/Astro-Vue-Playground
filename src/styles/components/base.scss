@@ -12,3 +12,19 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+a {
+  text-decoration: none;
+  transition: color, opacity var(--timing-hover);
+
+  &:focus {
+    outline-style: dashed;
+    outline-offset: 4px;
+    outline-color: var(--ui-color--primary);
+    outline-width: 2px;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

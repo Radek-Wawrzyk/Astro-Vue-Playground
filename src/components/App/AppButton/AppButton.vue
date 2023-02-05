@@ -1,7 +1,8 @@
 <template>
   <component
     :is="componentType"
-    :label="label"
+    :title="label"
+    :aria-label="label"
     :href="componentType === 'a' && to ? to : false"
     :class="classes"
   >
