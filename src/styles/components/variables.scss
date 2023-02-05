@@ -4,14 +4,29 @@ html {
   --text-color-medium: #7D828F;
   --text-color--light: #C8CCD8;
   --text-color--extra-light: #EEEFF4;
+  --text-color--accent: #FFFFFF;
 
   --ui-background-color: #FFFFFF;  
   --ui-background-color--accent: #EEEFF4;
+  --ui-background-color--medium: #60636D;
   --ui-background-color--dark: #1B1D23;
+  --ui-background-color--active: #C8CCD8;
   --ui-color--error: #DF5656;
+  --ui-color--primary:  #20A4F3;
   --ui-font: "League Spartan", sans-serif;
   --ui-border-color: #C8CCD8;
 
   --timing-animation: 0.3s;
+  --timing-hover: 0.3s;
   --timing-animation-hover: 0.4s;
+
+  --section-margin: 200px;
+
+  @media screen and (max-width: 1024px) {
+    --section-margin: 128px;
+  }
+
+  @media screen and (max-width: 576px) {
+    --section-margin: 64px;
+  }
 }

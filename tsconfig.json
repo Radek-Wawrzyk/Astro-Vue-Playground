@@ -5,7 +5,9 @@
     "jsx": "preserve",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@types": ["src/types"],
+      "@composables": ["src/composables"],
     },
     "lib": ["esnext", "dom", "dom.iterable", "es5", "es6"]
   }
