@@ -8,6 +8,7 @@ const prismicClient = prismic.createClient(
 );
 
 const client = new ApolloClient({
+  ssrMode: true,
   link: new HttpLink({
     uri: prismic.getGraphQLEndpoint('astro-vue-playground'),
     fetch: prismicClient.graphQLFetch,

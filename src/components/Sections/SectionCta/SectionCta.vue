@@ -2,7 +2,7 @@
   <section class="section-cta">
     <div class="container section-cta__container">
       <div class="section-cta__container">
-        <img class="section-cta__background" alt="" :src="(data.primary?.image?.url)" />
+        <img class="section-cta__background" alt="" :src="(data.primary?.image?.url as string)" />
         
         <div class="section-cta__content">
           <h2 class="section-cta__content-header">
