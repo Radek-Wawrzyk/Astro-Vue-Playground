@@ -1,13 +1,14 @@
 import type { RichTextField, ImageField } from '@prismicio/types';
 
-
 interface CmsSection {
-  __typename: string;
   primary: any;
+  items: any[];
+  id: string;
+  slice_type: string;
+  slice_label: null | string;
 }
 
-interface CmsSectionCta {
-  __typename: string;
+interface CmsSectionCta extends CmsSection {
   primary: {
     image: ImageField;
     button_text: string;

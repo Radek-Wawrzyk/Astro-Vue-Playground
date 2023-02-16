@@ -1,5 +1,5 @@
 enum CmsSections {
-  Cta = 'PageBodySection_cta',
+  Cta = 'section_cta',
 };
 
 export {
